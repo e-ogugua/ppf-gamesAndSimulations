@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'EmmanuelOS App',
-  description: 'Part of the EmmanuelOS ecosystem',
+  title: 'PoshPOULE Farms Games & Simulations',
+  description: 'Farm-themed games and simulations (C++ showcase)',
 }
 
 export default function RootLayout({

@@ -1,73 +1,35 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleGetStarted = () => {
-    setIsLoading(true)
-    // Placeholder functionality
-    setTimeout(() => setIsLoading(false), 1000)
-  }
-
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+    <main className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-8">
+      <div className="max-w-4xl mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-green-800 mb-4">
             PoshPOULE Farms Games & Simulations
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Farm-themed games and simulations (C++ showcase).
+          <p className="text-xl text-gray-600">
+            Farm-themed games and simulations (C++ showcase)
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleGetStarted}
-              disabled={isLoading}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50"
-            >
-              {isLoading ? 'Loading...' : 'Get Started'}
-            </motion.button>
-            
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Learn More
-            </motion.button>
-          </div>
-        </motion.div>
+        </header>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 grid md:grid-cols-3 gap-8"
-        >
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
-            <p className="text-gray-600">Core functionality description</p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">Farm Game Demo</h2>
+            <p className="text-gray-600 mb-4">Interactive C++ farm simulation</p>
+            <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition-colors">
+              Start Game
+            </button>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
-            <p className="text-gray-600">Additional feature description</p>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h2 className="text-2xl font-semibold text-blue-700 mb-4">Leaderboard</h2>
+            <p className="text-gray-600 mb-4">Top farmers worldwide</p>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+              View Rankings
+            </button>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
-            <p className="text-gray-600">Premium feature description</p>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </main>
   )
